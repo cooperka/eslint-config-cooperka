@@ -1,28 +1,30 @@
 module.exports = {
 
   // https://github.com/airbnb/javascript
-  extends: "airbnb",
+  extends: 'airbnb',
 
   rules: {
     // http://eslint.org/docs/rules/no-use-before-define
-    "no-use-before-define": [2, { "functions": false }],
+    'no-use-before-define': [2, {
+      functions: false,
+    }],
 
     // http://eslint.org/docs/rules/new-cap
-    "new-cap": [2, {
-      "capIsNewExceptions": [
+    'new-cap': [2, {
+      capIsNewExceptions: [
         // Immutable.js classes.
-        "Immutable.List", "Immutable.Map", "Immutable.OrderedMap", "Immutable.Set", "Immutable.OrderedSet",
-        "Immutable.Stack", "Immutable.Range", "Immutable.Repeat", "Immutable.Record", "Immutable.Seq",
-        "Immutable.Iterable", "Immutable.Collection",
+        'Immutable.List', 'Immutable.Map', 'Immutable.OrderedMap', 'Immutable.Set', 'Immutable.OrderedSet',
+        'Immutable.Stack', 'Immutable.Range', 'Immutable.Repeat', 'Immutable.Record', 'Immutable.Seq',
+        'Immutable.Iterable', 'Immutable.Collection',
       ],
     }],
 
     // Allow nested ternary, but obviously they should be wrapped in parenthesis if you do this.
     // http://eslint.org/docs/rules/no-nested-ternary
-    "no-nested-ternary": 0,
+    'no-nested-ternary': 0,
 
     // http://eslint.org/docs/rules/max-len
-    "max-len": [2, 120, 2, {
+    'max-len': [2, 120, 2, {
       ignoreUrls: true,
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
@@ -30,10 +32,10 @@ module.exports = {
     }],
 
     // http://eslint.org/docs/rules/arrow-parens
-    "arrow-parens": [2, "always"],
+    'arrow-parens': [2, 'always'],
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-    "import/prefer-default-export": 0,
+    'import/prefer-default-export': 0,
   },
 
 };
