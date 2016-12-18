@@ -5,37 +5,29 @@ module.exports = {
 
   rules: {
     // http://eslint.org/docs/rules/no-use-before-define
-    "no-use-before-define": [2, "nofunc"],
+    "no-use-before-define": [2, { "functions": false }],
 
     // http://eslint.org/docs/rules/new-cap
     "new-cap": [2, {
       "capIsNewExceptions": [
         // Immutable.js classes.
-        "List", "Map", "OrderedMap", "Set", "OrderedSet", "Stack",
-        "Range", "Repeat", "Record", "Seq", "Iterable", "Collection",
+        "Immutable.List", "Immutable.Map", "Immutable.OrderedMap", "Immutable.Set", "Immutable.OrderedSet",
+        "Immutable.Stack", "Immutable.Range", "Immutable.Repeat", "Immutable.Record", "Immutable.Seq",
+        "Immutable.Iterable", "Immutable.Collection",
       ],
     }],
 
-    // http://eslint.org/docs/rules/no-console
-    "no-console": 0,
-
-    // http://eslint.org/docs/rules/object-shorthand
-    "object-shorthand": 0,
-
-    // http://eslint.org/docs/rules/arrow-body-style
-    "arrow-body-style": 0,
-
+    // Allow nested ternary, but obviously they should be wrapped in parenthesis if you do this.
     // http://eslint.org/docs/rules/no-nested-ternary
     "no-nested-ternary": 0,
 
     // http://eslint.org/docs/rules/max-len
-    "max-len": [2, 120],
-
-    // http://eslint.org/docs/rules/no-shadow
-    "no-shadow": ["error"],
-
-    // http://eslint.org/docs/rules/class-methods-use-this
-    "class-methods-use-this": 0,
+    "max-len": [2, 120, 2, {
+      ignoreUrls: true,
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+      ignoreRegExpLiterals: true,
+    }],
 
     // http://eslint.org/docs/rules/arrow-parens
     "arrow-parens": [2, "always"],
