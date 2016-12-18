@@ -24,7 +24,7 @@ module.exports = {
     }],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
-    'react/forbid-prop-types': [2, {
+    'react/forbid-prop-types': ['error', {
       forbid: [
         // TODO: Eventually, add 'object' too. Use some sort of DRY typedef?
         'any', 'array',
