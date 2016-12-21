@@ -14,6 +14,8 @@ Supports plain JS, React, and React Native code linting.
 npm install --save-dev eslint-config-cooperka
 ```
 
+You can also uninstall any existing `eslint`-related modules, as everything that's needed is required explicitly by this module.
+
 ## Usage
 
 In your `.eslintrc` file, add:
@@ -45,19 +47,17 @@ what other libraries you're using you may want to set `env` and/or `globals`, e.
 
 Then you can customize the rules further if you like.
 
-To actually run your linter, you should add one of the following options to your `package.json`:
+To actually run your linter, you should add something like the following to your `package.json`:
 
 ```js
 "scripts": {
-  // To lint all files ending in `.js` under the `src` directory:
-  "lint": "eslint src --ext .js"
-
-  // To lint all files in the root directory AND under `src` ending in `.js` or `.jsx`:
-  "lint": "eslint *.js *.jsx src --ext .js,.jsx"
+  // To recursively lint all files under the root directory (`.`) ending in `.js` or `.jsx`:
+  "lint": "eslint . --ext .js,.jsx"
 }
 ```
 
 Then type `npm run lint` in your console to execute this script.
+The `node_modules` directory is ignored by default by ESLint, and you can further ignore by adding an `.eslintignore` file.
 
 ## Contributing
 
