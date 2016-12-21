@@ -10,11 +10,20 @@ Supports plain JS, React, and React Native code linting.
 
 ## Setup
 
+Install this library:
+
 ```console
 npm install --save-dev eslint-config-cooperka
 ```
 
-You can also uninstall any existing `eslint`-related modules, as everything that's needed is required explicitly by this module.
+Install [Airbnb config](https://www.npmjs.com/package/eslint-config-airbnb) along with its dependencies:
+
+```console
+(
+  export PKG=eslint-config-airbnb;
+  npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
+)
+```
 
 ## Usage
 
