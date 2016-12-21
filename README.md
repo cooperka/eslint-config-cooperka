@@ -29,6 +29,20 @@ In your `.eslintrc` file, add:
 
 ```
 
+You shouldn't need anything other than the above, though depending on
+what other libraries you're using you may want to set `env` and/or `globals`, e.g. for React Native:
+
+```js
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+
+  "globals": {
+    "__DEV__": true,
+  }
+```
+
 Then you can customize the rules further if you like.
 
 To actually run your linter, you should add one of the following options to your `package.json`:
