@@ -17,6 +17,9 @@ module.exports = {
       ],
     }],
 
+    // http://eslint.org/docs/rules/class-methods-use-this
+    "class-methods-use-this": 0,
+
     // Only allow `.js` extensions, not `.jsx`.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
     'react/jsx-filename-extension': ['error', {
