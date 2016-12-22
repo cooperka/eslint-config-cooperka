@@ -16,7 +16,7 @@ Install this library:
 npm install --save-dev eslint-config-cooperka
 ```
 
-Install [Airbnb config](https://www.npmjs.com/package/eslint-config-airbnb) along with its dependencies:
+Install the [Airbnb config](https://www.npmjs.com/package/eslint-config-airbnb) along with its dependencies:
 
 ```console
 (
@@ -67,6 +67,21 @@ To actually run your linter, you should add something like the following to your
 
 Then type `npm run lint` in your console to execute this script.
 The `node_modules` directory is ignored by default by ESLint, and you can further ignore by adding an `.eslintignore` file.
+
+## Why "yet another"?
+
+Though I love Airbnb's config in general and have kept nearly all of their defaults, I think it's too strict in some cases.
+I don't think a linter should ever *get in the way* of writing clean code, and in some cases the developer should be given more discretion.
+
+One small example is with the [arrow-body-style](http://eslint.org/docs/rules/arrow-body-style) rule.
+The current Airbnb config enforces no braces where they can be omitted (e.g. if directly returning a value),
+but I think it's cleaner in some cases to retain the braces. There's no harm at all in this, and generally it looks just fine either way.
+
+Another example is with the [class-methods-use-this](http://eslint.org/docs/rules/class-methods-use-this) rule,
+particularly with React classes. Airbnb enforces React [class method ordering](https://github.com/airbnb/javascript/tree/master/react#ordering),
+sorting static methods at the very top. If a particular method doesn't use `this` but does something very similar in nature to another class method
+that **does** use `this`, I like to put them next to each other. This would be impossible with these two rules being enforced at once.
+In this case I believe readability trumps any minor gain in speed from making one of the two methods static.
 
 ## Contributing
 
