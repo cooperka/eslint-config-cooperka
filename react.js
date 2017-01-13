@@ -33,6 +33,11 @@ module.exports = {
         'any', 'array',
       ],
     }],
+
+    // Often, props are not required because they're... optional!
+    // No reason to enforce defaults when `undefined` works perfectly well.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
+    "react/require-default-props": 'off',
   },
 
 };
