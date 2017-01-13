@@ -20,7 +20,7 @@ module.exports = {
     }],
 
     // http://eslint.org/docs/rules/arrow-body-style
-    "arrow-body-style": 0,
+    "arrow-body-style": 'off',
 
     // Allow nested ternary, but obviously they should be wrapped in parenthesis if you do this.
     // http://eslint.org/docs/rules/no-nested-ternary
