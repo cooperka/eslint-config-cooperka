@@ -8,7 +8,10 @@
   "license": "MIT",
   "keywords": [
     "eslint",
-    "eslintconfig"
+    "eslintconfig",
+    "react",
+    "react-native",
+    "airbnb"
   ],
   "peerDependencies": {
     "eslint": ">= 3",
