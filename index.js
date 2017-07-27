@@ -39,6 +39,13 @@ module.exports = {
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
     'import/prefer-default-export': 'off',
+
+    // http://eslint.org/docs/rules/padded-blocks
+    'padded-blocks': ['error', {
+      blocks: 'never',
+      classes: 'always',
+      switches: 'never',
+    }]
   },
 
 };
