@@ -12,13 +12,13 @@ Supports plain JS, React, and React Native code linting.
 
 Install this library:
 
-```console
+```bash
 npm install --save-dev eslint-config-cooperka
 ```
 
 Install the [Airbnb config](https://www.npmjs.com/package/eslint-config-airbnb) along with its dependencies:
 
-```console
+```bash
 (
   export PKG=eslint-config-airbnb;
   npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
@@ -29,7 +29,7 @@ Install the [Airbnb config](https://www.npmjs.com/package/eslint-config-airbnb) 
 
 In your `.eslintrc` file, add:
 
-```js
+```json
 {
   "extends": "cooperka/react-native",
 
@@ -43,7 +43,7 @@ In your `.eslintrc` file, add:
 You shouldn't need anything other than the above, though depending on
 what other libraries you're using you may want to set `env` and/or `globals`, e.g. for React Native:
 
-```js
+```json
   "env": {
     "browser": true,
     "jest": true
@@ -58,7 +58,7 @@ Then you can customize the rules further if you like.
 
 To actually run your linter, you should add something like the following to your `package.json`:
 
-```js
+```json
 "scripts": {
   // To recursively lint all files under the root directory (`.`) ending in `.js` or `.jsx`:
   "lint": "eslint . --ext .js,.jsx"
