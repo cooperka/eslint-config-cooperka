@@ -50,6 +50,12 @@ module.exports = {
     // Default is 'multiline' which only allows line breaks if the parameters themselves have line breaks.
     // https://eslint.org/docs/rules/function-paren-newline
     'function-paren-newline': ['error', 'consistent'],
+
+    // Default is 'always' which is highly unnecessary.
+    // https://eslint.org/docs/rules/object-curly-newline
+    'object-curly-newline': ['error', {
+      'multiline': true
+    }],
   },
 
 };
