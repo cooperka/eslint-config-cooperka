@@ -54,7 +54,7 @@ module.exports = {
     // Default is 'always' which is highly unnecessary.
     // https://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': ['error', {
-      'multiline': true
+      'consistent': true
     }],
   },
 
