@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cooperka",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Yet another ESLint config extending from Airbnb.",
   "main": "index.js",
   "repository": "git@github.com:cooperka/eslint-config-cooperka.git",
