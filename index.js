@@ -56,6 +56,9 @@ module.exports = {
     'object-curly-newline': ['error', {
       'consistent': true
     }],
+
+    // https://eslint.org/docs/rules/implicit-arrow-linebreak
+    'implicit-arrow-linebreak': 'off',
   },
 
 };
