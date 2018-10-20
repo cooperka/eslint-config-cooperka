@@ -4,9 +4,9 @@
 [![npm version](https://img.shields.io/npm/v/eslint-config-cooperka.svg)](https://www.npmjs.com/package/eslint-config-cooperka)
 [![Latest GitHub tag](https://img.shields.io/github/tag/cooperka/eslint-config-cooperka.svg)](https://github.com/cooperka/eslint-config-cooperka)
 
-Yet another [ESLint](http://eslint.org/) config extending from [Airbnb](https://github.com/airbnb/javascript).
+A sensible [ESLint](http://eslint.org/) config extending from [Airbnb](https://github.com/airbnb/javascript).
 
-Supports plain JS, React, and React Native code linting.
+Supports plain JS, React, and React Native code.
 
 ## Setup
 

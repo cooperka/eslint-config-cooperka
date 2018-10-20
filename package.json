@@ -1,18 +1,22 @@
 {
   "name": "eslint-config-cooperka",
   "version": "0.2.9",
-  "description": "Yet another ESLint config extending from Airbnb.",
-  "main": "index.js",
-  "repository": "git@github.com:cooperka/eslint-config-cooperka.git",
+  "description": "A sensible ESLint config extending from Airbnb.",
   "author": "Kevin Cooper <cooperka92@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cooperka/eslint-config-cooperka.git"
+  },
   "keywords": [
     "eslint",
-    "eslintconfig",
+    "config",
+    "vanilla",
     "react",
     "react-native",
     "airbnb"
   ],
+  "main": "index.js",
   "peerDependencies": {
     "eslint": ">= 3",
     "eslint-config-airbnb": ">= 11.2"
