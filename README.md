@@ -13,16 +13,13 @@ Supports plain JS, React, and React Native code linting.
 Install this library:
 
 ```bash
-npm install --save-dev eslint-config-cooperka
+yarn add --dev eslint-config-cooperka
 ```
 
 Install the [Airbnb config](https://www.npmjs.com/package/eslint-config-airbnb) along with its dependencies:
 
 ```bash
-(
-  export PKG=eslint-config-airbnb;
-  npm info "$PKG@latest" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG@latest"
-)
+npx install-peerdeps --dev eslint-config-airbnb
 ```
 
 ## Usage
@@ -65,7 +62,7 @@ To actually run your linter, you should add something like the following to your
 }
 ```
 
-Then type `npm run lint` in your console to execute this script.
+Then type `yarn run lint` in your console to execute this script.
 The `node_modules` directory is ignored by default by ESLint, and you can further ignore by adding an `.eslintignore` file.
 
 ## Why "yet another"?
