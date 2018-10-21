@@ -38,6 +38,20 @@ module.exports = {
     // No reason to enforce defaults when `undefined` works perfectly well.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
     "react/require-default-props": 'off',
+
+    // Prevent missing parentheses around multi-line JSX,
+    // except for props, which are already surrounded by curly braces.
+    // Unfortunately 'new-line' alone is not an option here.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
+    'react/jsx-wrap-multilines': ['error', {
+      declaration: 'parens-new-line',
+      assignment: 'parens-new-line',
+      return: 'parens-new-line',
+      arrow: 'parens-new-line',
+      condition: 'parens-new-line',
+      logical: 'parens-new-line',
+      prop: 'ignore',
+    }],
   },
 
 };
