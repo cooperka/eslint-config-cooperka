@@ -24,6 +24,12 @@ npx install-peerdeps --dev eslint-config-airbnb
 
 ## Usage
 
+These are all of the possible configs you can extend using this library:
+- `cooperka`: Plain JS
+- `cooperka/react`: Plain JS + React
+- `cooperka/react-native`: Plain JS + React + React Native
+- `cooperka/typescript`: TypeScript (use in addition to any of the above)
+
 In your `.eslintrc` file, add:
 
 ```js
@@ -71,8 +77,8 @@ To actually run your linter, you should add something like the following to your
 }
 ```
 
-Then type `yarn run lint` in your console to execute this script.
-The `node_modules` directory is ignored by default by ESLint, and you can further ignore by adding an `.eslintignore` file.
+Then execute `yarn run lint` in your console.
+The `node_modules` directory is ignored by default by ESLint; you can further ignore by adding an `.eslintignore` file.
 
 ## Why "yet another"?
 
