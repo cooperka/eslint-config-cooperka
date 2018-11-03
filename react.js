@@ -20,10 +20,10 @@ module.exports = {
     // http://eslint.org/docs/rules/class-methods-use-this
     "class-methods-use-this": 'off',
 
-    // Only allow `.js` extensions, not `.jsx`.
+    // Support TypeScript.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
     'react/jsx-filename-extension': ['error', {
-      extensions: ['.js'],
+      extensions: ['.js', '.jsx', '.tsx'],
     }],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
