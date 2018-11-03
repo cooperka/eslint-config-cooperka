@@ -20,7 +20,7 @@ module.exports = {
     }],
 
     // http://eslint.org/docs/rules/arrow-body-style
-    "arrow-body-style": 'off',
+    'arrow-body-style': 'off',
 
     // Allow nested ternary, but obviously they should be wrapped in parenthesis if you do this.
     // http://eslint.org/docs/rules/no-nested-ternary
@@ -40,6 +40,12 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
     'import/prefer-default-export': 'off',
 
+    // Allow importing devDependencies in tests.
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: ['**/*.{test,spec}.{js,jsx,ts,tsx}']
+    }],
+
     // http://eslint.org/docs/rules/padded-blocks
     'padded-blocks': ['error', {
       blocks: 'never',
@@ -54,7 +60,7 @@ module.exports = {
     // Default is 'always' which is highly unnecessary.
     // https://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': ['error', {
-      'consistent': true
+      consistent: true
     }],
 
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
