@@ -4,9 +4,9 @@
 [![npm version](https://img.shields.io/npm/v/eslint-config-cooperka.svg)](https://www.npmjs.com/package/eslint-config-cooperka)
 [![Latest GitHub tag](https://img.shields.io/github/tag/cooperka/eslint-config-cooperka.svg)](https://github.com/cooperka/eslint-config-cooperka)
 
-A sensible [ESLint](http://eslint.org/) config extending from [Airbnb](https://github.com/airbnb/javascript).
+Sensible [ESLint](http://eslint.org/) configs extending from [Airbnb](https://github.com/airbnb/javascript).
 
-Supports plain JS, React, and React Native code.
+Provides configs for plain JS, TypeScript, React, and React Native.
 
 ## Setup
 
@@ -28,13 +28,22 @@ In your `.eslintrc` file, add:
 
 ```js
 {
-  "extends": "cooperka/react-native",
+  "extends": "cooperka",
 
   // Any rules here will override those from
   // https://github.com/cooperka/eslint-config-cooperka.
   "rules": {}
 }
 
+```
+
+You can also extend multiple rule sets at once:
+
+```js
+  "extends": [
+    "cooperka/react",
+    "cooperka/typescript"
+  ]
 ```
 
 You shouldn't need anything other than the above, though depending on
