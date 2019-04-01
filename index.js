@@ -1,6 +1,7 @@
 module.exports = {
 
   // https://github.com/airbnb/javascript
+  // TODO: The base Airbnb config now includes React configs, but those aren't needed here.
   extends: 'airbnb',
 
   rules: {

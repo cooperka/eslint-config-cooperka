@@ -1,6 +1,8 @@
 module.exports = {
 
-  extends: ['./react'].map(require.resolve),
+  extends: [
+    require.resolve('./react'),
+  ],
 
   plugins: [
     // https://github.com/Intellicode/eslint-plugin-react-native

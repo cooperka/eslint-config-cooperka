@@ -1,13 +1,10 @@
 module.exports = {
 
-  extends: ['./index'].map(require.resolve),
-
-  plugins: [
-    // https://github.com/yannickcr/eslint-plugin-react
-    'react'
+  extends: [
+    require.resolve('./index'),
   ],
 
-  // React-specific rules extend from
+  // React-specific Airbnb rules are defined in
   // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js
   rules: {
     // http://eslint.org/docs/rules/no-shadow
