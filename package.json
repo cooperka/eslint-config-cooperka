@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-cooperka",
   "version": "1.0.0",
-  "description": "Sensible ESLint configs extending from Airbnb.",
+  "description": "More sensible ESLint configs extending from Airbnb.",
   "author": "Kevin Cooper <cooperka92@gmail.com>",
   "license": "MIT",
   "repository": {
