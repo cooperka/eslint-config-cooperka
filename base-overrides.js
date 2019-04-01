@@ -1,9 +1,7 @@
 module.exports = {
 
-  // https://github.com/airbnb/javascript
-  // TODO: The base Airbnb config now includes React configs, but those aren't needed here.
-  extends: 'airbnb',
-
+  // Base rules for vanilla JS that can be used to override any other config.
+  // This file intentionally does NOT extend any other config.
   rules: {
     // It's perfectly fine to call a function before it's defined in JavaScript.
     // http://eslint.org/docs/rules/no-use-before-define

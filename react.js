@@ -1,7 +1,8 @@
 module.exports = {
 
   extends: [
-    require.resolve('./index'),
+    'airbnb',
+    require.resolve('./base-overrides'),
   ],
 
   // React-specific Airbnb rules are defined in

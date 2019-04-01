@@ -16,7 +16,7 @@
     "react-native",
     "airbnb"
   ],
-  "main": "index.js",
+  "main": "vanilla.js",
   "peerDependencies": {
     "eslint": ">= 3",
     "eslint-config-airbnb": ">= 11.2"

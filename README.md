@@ -27,7 +27,7 @@ npx install-peerdeps --dev eslint-config-airbnb
 ## Usage
 
 These are all of the possible configs you can extend using this library:
-- `cooperka`: Plain JS
+- `cooperka/vanilla`: Plain JS (via `eslint-config-airbnb-base`)
 - `cooperka/react`: Plain JS + React
 - `cooperka/react-native`: Plain JS + React + React Native
 - `cooperka/typescript`: TypeScript (use in addition to any of the above)
