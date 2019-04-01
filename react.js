@@ -9,15 +9,18 @@ module.exports = {
   rules: {
     // http://eslint.org/docs/rules/no-shadow
     'no-shadow': ['error', {
+      // Make some exceptions.
       allow: [
-        'state', // Mostly useful for Redux selector functions.
+        // Mostly useful for Redux selector functions.
+        'state',
       ],
     }],
 
+    // Allow non-static class methods to prevent conflicts with class method ordering rules.
     // http://eslint.org/docs/rules/class-methods-use-this
-    "class-methods-use-this": 'off',
+    'class-methods-use-this': 'off',
 
-    // Support TypeScript.
+    // Allow `.js` and support TypeScript.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
     'react/jsx-filename-extension': ['error', {
       extensions: ['.js', '.jsx', '.tsx'],
@@ -26,19 +29,21 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
     'react/forbid-prop-types': ['error', {
       forbid: [
-        // TODO: Eventually, add 'object' too. Use some sort of DRY typedef?
+        // Forbid excessively generic types, but DON'T forbid `object`.
         'any', 'array',
       ],
     }],
 
-    // Often, props are not required because they're... optional!
+    // Often, props are not required because they're OPTIONAL!
     // No reason to enforce defaults when `undefined` works perfectly well.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
-    "react/require-default-props": 'off',
+    'react/require-default-props': 'off',
 
-    // Prevent missing parentheses around multi-line JSX,
-    // except for props, which are already surrounded by curly braces.
-    // Unfortunately 'new-line' alone is not an option here.
+    // Prevent missing parentheses around multi-line JSX, except for props,
+    // which are already surrounded by curly braces and don't need additional parenthesis.
+    //
+    // Unfortunately 'new-line' alone is not an option here, because that would be good to enforce.
+    //
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
     'react/jsx-wrap-multilines': ['error', {
       declaration: 'parens-new-line',
@@ -47,7 +52,7 @@ module.exports = {
       arrow: 'parens-new-line',
       condition: 'parens-new-line',
       logical: 'parens-new-line',
-      prop: 'ignore',
+      prop: 'ignore', // This is the only change from the Airbnb config.
     }],
   },
 
