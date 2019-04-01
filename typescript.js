@@ -7,8 +7,11 @@ module.exports = {
     "typescript"
   ],
 
-  // Intended to supplement the rules for other environments (e.g. React).
-  // You should extend both 'react' and 'typescript'.
+  // Airbnb does not currently provide any rules for TypeScript,
+  // so turn on some basic ones here.
+  //
+  // These are intended to supplement the rules for other environments (e.g. React).
+  // You should extend both 'react' AND 'typescript' in your project.
   "rules": {
     // TypeScript compiler will handle this.
     "no-undef": "off",
