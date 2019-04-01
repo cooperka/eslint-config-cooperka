@@ -4,9 +4,11 @@
 [![npm version](https://img.shields.io/npm/v/eslint-config-cooperka.svg)](https://www.npmjs.com/package/eslint-config-cooperka)
 [![Latest GitHub tag](https://img.shields.io/github/tag/cooperka/eslint-config-cooperka.svg)](https://github.com/cooperka/eslint-config-cooperka)
 
-Sensible [ESLint](http://eslint.org/) configs extending from [Airbnb](https://github.com/airbnb/javascript).
+More sensible [ESLint](http://eslint.org/) configs extending from [Airbnb](https://github.com/airbnb/javascript).
 
-Provides configs for plain JS, TypeScript, React, and React Native.
+I don't think a linter should ever *get in the way* of writing clean code.
+
+Provides configs for **plain JS**, **React**, **React Native**, and **TypeScript**.
 
 ## Setup
 
