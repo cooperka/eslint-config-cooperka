@@ -52,8 +52,10 @@ You can also extend multiple rule sets at once:
   ]
 ```
 
-You shouldn't need anything other than the above, though depending on
-what other libraries you're using you may want to set `env` and/or `globals`, e.g. for React Native:
+That's all you need!
+
+Depending on what other libraries you're using, you may also want to set things like `env` and `globals`.
+Here's a common additional config for React Native:
 
 ```js
   "env": {
@@ -66,34 +68,44 @@ what other libraries you're using you may want to set `env` and/or `globals`, e.
   }
 ```
 
-Then you can customize the rules further if you like.
+### Linting
 
 To actually run your linter, you should add something like the following to your `package.json`:
 
 ```js
 "scripts": {
-  // To recursively lint all files under the root directory (`.`) ending in `.js` or `.jsx`:
-  "lint": "eslint . --ext .js,.jsx"
+  // Recursively lint all files under the root directory (`.`) ending in `.js` or `.jsx`:
+  "lint": "eslint --ext .js,.jsx ."
 }
 ```
 
 Then execute `yarn run lint` in your console.
+
 The `node_modules` directory is ignored by default by ESLint; you can further ignore by adding an `.eslintignore` file.
 
 ## Why "yet another"?
 
-Though I love Airbnb's config in general and have kept nearly all of their defaults, I think it's too strict in some cases.
-I don't think a linter should ever *get in the way* of writing clean code, and in some cases the developer should be given more discretion.
+I don't think a linter should ever *get in the way* of writing clean code.
+
+I love Airbnb's config in general and have kept nearly all of their defaults,
+but I think it's too strict in some cases, and the developer should be given more discretion.
+
+### Examples
 
 One small example is with the [arrow-body-style](http://eslint.org/docs/rules/arrow-body-style) rule.
-The current Airbnb config enforces no braces where they can be omitted (e.g. if directly returning a value),
-but I think it's cleaner in some cases to retain the braces. There's no harm at all in this, and generally it looks just fine either way.
+The current Airbnb config **enforces** no braces whenever they can be omitted (e.g. for `(x) => x * 2`),
+but I think it's more desirable in some cases to retain the braces. There's no harm at all in this.
+Why make developers do extra work for an unnecessary standard?
 
 Another example is with the [class-methods-use-this](http://eslint.org/docs/rules/class-methods-use-this) rule,
-particularly with React classes. Airbnb enforces React [class method ordering](https://github.com/airbnb/javascript/tree/master/react#ordering),
-sorting static methods at the very top. If a particular method doesn't use `this` but does something very similar in nature to another class method
-that **does** use `this`, I like to put them next to each other. This would be impossible with these two rules being enforced at once.
-In this case I believe readability trumps any minor gain in speed from making one of the two methods static.
+particularly with React classes.
+Airbnb enforces React [class method ordering](https://github.com/airbnb/javascript/tree/master/react#ordering),
+which requires static methods to be defined at the top of a class.
+
+If a particular method doesn't use `this` but does something similar in nature to a different method
+that **does** use `this`, I like to put them next to each other for readability.
+This organization would be impossible with the two above rules being enforced at once.
+In this case I believe readability should trump any minor gain in speed from making one of the two methods static.
 
 ## Contributing
 
