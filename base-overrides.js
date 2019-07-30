@@ -65,6 +65,12 @@ module.exports = {
     // Allow moving return value to next line if you want to.
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
     'implicit-arrow-linebreak': 'off',
+
+    // Airbnb changed the default to not allow `else if`, which is too strict.
+    // https://eslint.org/docs/rules/no-else-return
+    'no-else-return': ['error', {
+      allowElseIf: true
+     }],
   },
 
 };
