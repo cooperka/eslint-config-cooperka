@@ -66,6 +66,10 @@ module.exports = {
     // Good coding practices should be used to ensure prop spreading isn't abused.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
     'react/jsx-props-no-spreading': 'off',
+
+    // Too strict. Airbnb gives no justification for this one.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
+    'react/state-in-constructor': 'off',
   },
 
 };
