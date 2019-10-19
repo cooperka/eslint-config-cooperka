@@ -55,6 +55,17 @@ module.exports = {
       logical: 'parens-new-line',
       prop: 'ignore', // This is the only change from the Airbnb config.
     }],
+
+    // Airbnb wants to enforce `MyComponent.propTypes = { ... }`, and
+    // I want to allow `static propTypes = { ... }`, but unfortunately
+    // it's not possible to allow both at once, so disable the rule.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
+    'react/static-property-placement': 'off',
+
+    // This is a major convenience, so allow it.
+    // Good coding practices should be used to ensure prop spreading isn't abused.
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+    'react/jsx-props-no-spreading': 'off',
   },
 
 };
